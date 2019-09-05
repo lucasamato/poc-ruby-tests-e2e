@@ -1,0 +1,5 @@
+
+
+
+
+find('li', text:'VER RESUMO (F2)').click ou set
