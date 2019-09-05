@@ -1,5 +1,9 @@
 pipeline{
-    agent any
+    agent {
+        docker {
+            image "ruby"
+        }
+    }
     stages {
         stage("Build"){
             steps {
@@ -8,7 +12,7 @@ pipeline{
         }
         stage("Tests") {
             steps {
-                sh "eho 'simulando um teste automatizado'"
+                sh "echo 'simulando um teste automatizado'"
 
                 
             }
