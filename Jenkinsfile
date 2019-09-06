@@ -12,7 +12,7 @@ pipeline{
         }
         stage("Tests") {
             steps {
-                sh "echo 'simulando um teste automatizado'"
+                sh "rspec --tag @testes"
 
                 
             }
