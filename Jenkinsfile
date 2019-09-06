@@ -15,7 +15,7 @@ pipeline{
         }
         stage("Tests") {
             steps {
-                sh "rspec --tag @testes"
+                sh "bundle rspec --tag @testes"
 
                 
             }
