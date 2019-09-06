@@ -9,7 +9,7 @@ pipeline{
             steps {
                 sh "gem install bundler:2.0.2"
 
-                sh "gem istall capybara:3.10.0"
+                sh "gem capybara:3.10.0"
 
                 sh "gem rspec:3.8.0"
 
