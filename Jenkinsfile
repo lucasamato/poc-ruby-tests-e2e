@@ -1,13 +1,15 @@
 pipeline{
     agent {
         docker {
-            image "ruby"
+            image "ruby:alpine"
         }
     }
     stages {
         stage("Build"){
             steps {
-                sh "gem install bundler:2.0.2"
+                sh "chmod +x build/alpine.sh"
+                sh "./build/alpeine.sh"
+                sh "bundle install"
                
 
 
