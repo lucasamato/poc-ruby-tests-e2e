@@ -9,11 +9,11 @@ pipeline{
             steps {
                 sh "gem install bundler:2.0.2"
 
-                source "https://rubygems.org"
+                sh "gem istall capybara:3.10.0"
 
-gem "install bundler", "2.0.2"
-gem "capybara", "3.10.0"
-gem "rspec", "3.8.0"
+                sh "gem rspec:3.8.0"
+
+
             }
         }
         stage("Tests") {
