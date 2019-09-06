@@ -7,7 +7,7 @@ pipeline{
     stages {
         stage("Build"){
             steps {
-                sh "bundle install"
+                sh "gem install bundler:2.0.2"
             }
         }
         stage("Tests") {
