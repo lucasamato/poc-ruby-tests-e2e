@@ -23,3 +23,6 @@ steps:
 - script: rspec --init
   displayName: 'rspec install'
 
+
+- script: rspec --tag @testes
+  displayName: 'testes'
