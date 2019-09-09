@@ -23,6 +23,11 @@ steps:
 - script: rspec --init
   displayName: 'rspec install'
 
+  - task: AzureRmWebAppDeployment@4
+  inputs:
+    VirtualApplication: '<name of virtual application>'
+
+
 
 - script: rspec --tag @testes
   displayName: 'testes'
