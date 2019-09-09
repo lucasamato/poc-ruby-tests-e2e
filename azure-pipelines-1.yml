@@ -26,4 +26,4 @@ steps:
 
 
 - script: rspec --tag @testes
-   displayName: 'rspec --tag @testes'
+   displayName:'rspec --tag @testes'
