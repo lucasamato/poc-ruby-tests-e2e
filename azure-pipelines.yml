@@ -24,7 +24,5 @@ steps:
   displayName: 'rspec install'
 
 
-
-
 - script: rspec --tag @testes
   displayName: 'testes'
