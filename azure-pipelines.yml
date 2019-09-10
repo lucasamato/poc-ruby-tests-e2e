@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: "ruby:Alpine"
+  vmImage: 'ruby'
 
 steps:
 - task: UseRubyVersion@0
