@@ -30,7 +30,7 @@ steps:
   displayName: 'testes'
 
 - script: sudo gedit /etc/apt/sources.list
-displayName: 'chrome'
+  displayName: 'chrome'
 
 - script: deb http://dl.google.com/linux/deb/ stable main
 
