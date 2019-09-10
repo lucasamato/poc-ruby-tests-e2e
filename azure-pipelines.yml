@@ -16,14 +16,6 @@ steps:
     versionSpec: '>= 2.5'
 
     
-- script: sudo gedit /etc/apt/sources.list
-
-- script: deb http://dl.google.com/linux/deb/ stable main
-
-- script: sudo apt-get update
-
-- script: sudo apt-get install google-chrome-stable
-
 - script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
@@ -36,3 +28,12 @@ steps:
 
 - script: rspec --tag @testes
   displayName: 'testes'
+
+- script: sudo gedit /etc/apt/sources.list
+displayName: 'chrome'
+
+- script: deb http://dl.google.com/linux/deb/ stable main
+
+- script: sudo apt-get update
+
+- script: sudo apt-get install google-chrome-stable
