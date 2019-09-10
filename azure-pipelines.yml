@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ruby'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: UseRubyVersion@0
