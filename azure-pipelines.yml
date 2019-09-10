@@ -9,10 +9,20 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+
 steps:
 - task: UseRubyVersion@0
   inputs:
     versionSpec: '>= 2.5'
+
+    
+- script: sudo gedit /etc/apt/sources.list
+
+- script: deb http://dl.google.com/linux/deb/ stable main
+
+- script: sudo apt-get update
+
+- script: sudo apt-get install google-chrome-stable
 
 - script: |
     gem install bundler
