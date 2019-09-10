@@ -20,7 +20,7 @@ steps:
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
-- script: : |
+- script: |
     sh "chmod =x build/alpine.sh"
   displayName: 'permissions'
 
