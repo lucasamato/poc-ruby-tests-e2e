@@ -14,8 +14,7 @@ steps:
   inputs:
     versionSpec: '>= 2.5'
     
-- task: AzurePowerShell@1
-     
+    
      
 - script: sh "chmod =x build/alpine.sh"
 
@@ -26,8 +25,6 @@ steps:
     gem install bundler
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
-
-
 
 
 
