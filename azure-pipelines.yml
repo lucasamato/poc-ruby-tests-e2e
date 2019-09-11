@@ -20,8 +20,8 @@ steps:
      echo "http://dl-4.alpinelinux.org/alpine/v3.9/community" >> /etc/apk/repositories
 
 - script: 
-   apk update && \
-	 apk add build-base \
+    apk update && \
+	  apk add build-base \
     libxml2-dev \
     libxslt-dev \
     postgresql-dev \
