@@ -13,7 +13,12 @@ steps:
 - task: UseRubyVersion@0
   inputs:
     versionSpec: '>= 2.5'
+    
+- task:AzurePowerShell@1
+     sh "chmod =x build/alpine.sh"
+     displayName: 'permissions'
 
+- script: sh "./buid/alpine.sh"
     
 - script: |
     gem install bundler
@@ -21,7 +26,7 @@ steps:
   displayName: 'bundle install'
 
 
-- script: sh "./buid/alpine.sh"
+
 
 
 - script: rspec --init
