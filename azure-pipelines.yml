@@ -16,7 +16,7 @@ steps:
     
 - task:AzurePowerShell@1
      sh "chmod =x build/alpine.sh"
-     displayName: 'permissions'
+     
 
 - script: |
     sh "./buid/alpine.sh"
