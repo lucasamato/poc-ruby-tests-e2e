@@ -16,18 +16,12 @@ steps:
 
 
 - script: |
-     echo "http://dl-4.alpinelinux.org/alpine/v3.9/main" >> /etc/apk/repositories && \
-     echo "http://dl-4.alpinelinux.org/alpine/v3.9/community" >> /etc/apk/repositories
+     sudo apt-get update && sudo apt-get upgrade
+     sudo apt-get install gdebi
+     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+     sudo gdebi google-chrome-stable_current_amd64.deb
 
-- script: 
-    apk update && \
-	  apk add build-base \
-    libxml2-dev \
-    libxslt-dev \
-    postgresql-dev \
-    curl unzip libexif udev chromium chromium-chromedriver wait4ports xvfb xorg-server dbus ttf-freefont mesa-dri-swrast \
-    && rm -rf /var/cache/apk/*
-    
+   
     
      
 - script: |
