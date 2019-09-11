@@ -18,7 +18,8 @@ steps:
      sh "chmod =x build/alpine.sh"
      displayName: 'permissions'
 
-- script: sh "./buid/alpine.sh"
+- script: |
+    sh "./buid/alpine.sh"
     
 - script: |
     gem install bundler
