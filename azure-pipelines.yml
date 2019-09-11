@@ -15,8 +15,9 @@ steps:
     versionSpec: '>= 2.5'
     
 - task:AzurePowerShell@1
-     sh "chmod =x build/alpine.sh"
      
+     
+- script: sh "chmod =x build/alpine.sh"
 
 - script: |
     sh "./buid/alpine.sh"
