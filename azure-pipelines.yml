@@ -14,16 +14,9 @@ steps:
   inputs:
     versionSpec: '>= 2.5'
 
-
-- script: |
-     sudo apt-get update && sudo apt-get upgrade
-     sudo apt-get install gdebi
-     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-     sudo gdebi google-chrome-stable_current_amd64.deb
-
-   
+ 
     
-     
+
 - script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
@@ -35,6 +28,4 @@ steps:
   displayName: 'rspec install'
 
 
-- script: rspec --tag @testes
-  displayName: 'testes'
 
