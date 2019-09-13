@@ -23,11 +23,11 @@ steps:
 
    
    
-- script: chmod +s wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+- script: bundler chmod +s wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   displayName: 'Baixando o chrome'
 
 
-- script: chmod +s apt install ./google-chrome-stable_current_amd64.deb
+- script: bundler chmod +s apt install ./google-chrome-stable_current_amd64.deb
   displayName: 'instalando o chrome'
 
 - script: rspec --init
