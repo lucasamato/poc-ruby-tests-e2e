@@ -12,20 +12,15 @@ pool:
 steps:
 - task: UseRubyVersion@0
   inputs:
-    versionSpec: '>= 2.5'
-
-- task: DockerInstaller@0
-  inputs:
-      dockerVersion: '17.09.0-ce'
-      docker run -ti -p 9222:9222 --cap-add=SYS_ADMIN giggio/chrome
+    versionSpec: '>= 2.5'   
+    
 
 
-- script: |
+ - script: |
      gem install bundler
      bundle install --retry=3 --jobs=4
  displayName: 'bundle install'
  
-
 
  - script: rspec --init
     displayName:'rspec install'
