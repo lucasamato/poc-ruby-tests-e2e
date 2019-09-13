@@ -28,7 +28,7 @@ steps:
   displayName: 'instalando o chrome'
 
 - script: rspec --init
-displayName: 'rspec install'
+  displayName: 'rspec install'
 
 - script: rspec --tag @testes
   displayName: 'rspec install'
