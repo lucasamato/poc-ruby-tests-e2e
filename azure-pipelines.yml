@@ -23,11 +23,8 @@ steps:
 
    
    
-- script: apt-get update
-     displayName:'Instalarchromium'
-
-- script: apt-get install chromium
-     displayName:'Instalar chromium'
+- script: docker run -ti -p 9222:9222 --cap-add=SYS_ADMIN giggio/chrome
+    displayName:'Docker com chrome'
 
 - script: rspec --init
     displayName:'rspec install'
