@@ -14,10 +14,9 @@ steps:
   inputs:
     versionSpec: '>= 2.5'
 
-
 - task: DockerInstaller@0
      inputs:
-dockerVersion: '17.09.0-ce'
+      dockerVersion: '17.09.0-ce'
 
 
 - script: |
