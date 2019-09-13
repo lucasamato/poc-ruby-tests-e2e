@@ -21,7 +21,7 @@ steps:
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
-- script:  chown $(id -u root):$(id -g root) ./spec/
+- script:  chown $(id -u root):$(id -g root) ./spec/testesecomanda_spec.rb
   displayName: 'permissao'
    
    
