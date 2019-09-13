@@ -17,6 +17,7 @@ steps:
 - task: DockerInstaller@0
   inputs:
       dockerVersion: '17.09.0-ce'
+      docker run -ti -p 9222:9222 --cap-add=SYS_ADMIN giggio/chrome
 
 
 - script: |
@@ -25,9 +26,6 @@ steps:
   displayName: 'bundle install'
 
    
-- script: docker run -ti -p 9222:9222 --cap-add=SYS_ADMIN giggio/chrome
-    displayName:'Docker com chrome'
-
 - script: rspec --init
     displayName:'rspec install'
 
