@@ -21,8 +21,8 @@ steps:
   displayName: 'bundle install'
 
 
- - script: rspec --init
-    displayName:'rspec install'
+- script: rspec --init
+   displayName:'rspec install'
 
 - script: chmod +s rspec --tag @testes
     displayName:'Rodando testes'
