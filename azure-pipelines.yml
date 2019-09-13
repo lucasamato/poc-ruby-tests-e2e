@@ -24,7 +24,7 @@ steps:
 - script: rspec --init
    displayName:'rspec install'
 
-- script: chmod +s rspec --tag @testes
-    displayName:'Rodando testes'
+- script: rspec --tag @testes
+    displayName:'Aplicando testes'
 
 
