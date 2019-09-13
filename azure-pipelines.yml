@@ -18,7 +18,7 @@ steps:
 - script: |
      gem install bundler
      bundle install --retry=3 --jobs=4
- displayName: 'bundle install'
+  displayName: 'bundle install'
 
 
  - script: rspec --init
