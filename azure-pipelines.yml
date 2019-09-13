@@ -24,7 +24,7 @@ steps:
 - script: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   displayName: 'Baixando o chrome'
 
-- script: : apt install ./google-chrome-stable_current_amd64.deb
+- script: apt install ./google-chrome-stable_current_amd64.deb
   displayName: 'instalando o chrome'
 
 - script: rspec --init
