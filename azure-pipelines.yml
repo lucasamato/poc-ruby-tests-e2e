@@ -27,7 +27,7 @@ steps:
 - script: rspec --init
   displayName: 'rspec install'
 
-- scrip: rake specs
+- script: rake specs
   displayName: 'rspec install'
 
 
