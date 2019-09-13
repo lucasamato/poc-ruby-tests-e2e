@@ -21,21 +21,21 @@ steps:
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
-- script:  chown $(id -u root):$(id -g root) /*
+- script:  chown $(id -u root):$(id -g root) ./spec/
   displayName: 'permissao'
    
    
-- script: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+- script: chmod +s wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   displayName: 'Baixando o chrome'
 
 
-- script: apt install ./google-chrome-stable_current_amd64.deb
+- script: chmod +s apt install ./google-chrome-stable_current_amd64.deb
   displayName: 'instalando o chrome'
 
 - script: rspec --init
   displayName: 'rspec install'
 
-- script: rspec --tag @testes
+- script: chmod +s rspec --tag @testes
   displayName: 'rspec install'
 
 
