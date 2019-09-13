@@ -23,14 +23,16 @@ steps:
 
    
    
-- script: $ su - 
-     apt-get update
-     apt-get install chromium chromium-l10n
+- script: $ su - apt-get update
+     displayName: 'Instalar chromium'
+
+- script: apt-get install chromium chromium-l10n
+     displayName: 'Instalar chromium'
 
 - script: rspec --init
   displayName: 'rspec install'
 
 - script: chmod +s rspec --tag @testes
-  displayName: 'rspec install'
+  displayName: 'Rodando testes'
 
 
