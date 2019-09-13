@@ -20,7 +20,7 @@ steps:
       docker run -ti -p 9222:9222 --cap-add=SYS_ADMIN giggio/chrome
 
 
- - script: |
+- script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
