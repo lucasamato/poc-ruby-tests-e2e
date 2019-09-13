@@ -15,13 +15,16 @@ steps:
     versionSpec: '>= 2.5'
 
 
+- task: DockerInstaller@0
+     inputs:
+dockerVersion: '17.09.0-ce'
+
 
 - script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
-   
    
 - script: docker run -ti -p 9222:9222 --cap-add=SYS_ADMIN giggio/chrome
     displayName:'Docker com chrome'
