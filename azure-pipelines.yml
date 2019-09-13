@@ -14,8 +14,7 @@ steps:
   inputs:
     versionSpec: '>= 2.5'
 
- 
-    
+
 
 - script: |
     gem install bundler
@@ -23,11 +22,10 @@ steps:
   displayName: 'bundle install'
 
 
-
 - script: rspec --init
   displayName: 'rspec install'
 
-- script: rake specs
+- script: rspec --tag @testes
   displayName: 'rspec install'
 
 
