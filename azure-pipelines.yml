@@ -20,16 +20,15 @@ steps:
       docker run -ti -p 9222:9222 --cap-add=SYS_ADMIN giggio/chrome
 
 
-- script: |
+ - script: |
     gem install bundler
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
-   
-- script: rspec --init
+ - script: rspec --init
     displayName:'rspec install'
 
-- script: chmod +s rspec --tag @testes
+ - script: chmod +s rspec --tag @testes
     displayName:'Rodando testes'
 
 
