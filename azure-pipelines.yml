@@ -21,8 +21,13 @@ steps:
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
+- script:  chown $(id -u root):$(id -g root) /*
+  displayname: 'permissao'
+   
+   
 - script: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   displayName: 'Baixando o chrome'
+
 
 - script: apt install ./google-chrome-stable_current_amd64.deb
   displayName: 'instalando o chrome'
