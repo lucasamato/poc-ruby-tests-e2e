@@ -14,7 +14,9 @@ steps:
   inputs:
     versionSpec: '>= 2.5'   
     
-
+- script: ruby install
+  displayName: 'instalar o Ruby'
+  
 - script: |
      gem install bundler
      bundle install --retry=3 --jobs=4
@@ -25,8 +27,7 @@ steps:
    displayName:'rspec install'
 
 
-- script: ruby install
-  displayName: 'instalar o Ruby'
+
 
 - script: rspec --tag @testes
     displayName:'Aplicando testes'
